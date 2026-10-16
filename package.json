@@ -1,0 +1,36 @@
+{
+  "name": "siata-aire-valle-aburra",
+  "private": true,
+  "version": "1.0.0",
+  "description": "PWA de calidad del aire (PM2.5) del Valle de Aburrá con ETL en Python sobre datos abiertos del SIATA",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "node --env-file-if-exists=.env --watch backend/index.js",
+    "dev:full": "concurrently -n web,api -c magenta,cyan \"npm:dev\" \"npm:dev:api\"",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "start": "node --env-file-if-exists=.env backend/index.js",
+    "etl": "python -m etl.run",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.2.0",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.0"
+  }
+}

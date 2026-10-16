@@ -1,0 +1,33 @@
+{
+  "name": "Aire Valle de Aburrá — SIATA",
+  "short_name": "Aire MDE",
+  "description": "Calidad del aire (PM2.5) en tu ubicación, interpolada a partir de la red de estaciones del SIATA.",
+  "lang": "es-CO",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b1020",
+  "theme_color": "#0b1020",
+  "categories": ["health", "utilities", "weather"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Analizar mi ubicación",
+      "short_name": "Analizar",
+      "url": "/?accion=analizar",
+      "description": "Mide la calidad del aire en el punto donde estás"
+    },
+    {
+      "name": "Proceso ETL",
+      "short_name": "ETL",
+      "url": "/?vista=etl",
+      "description": "Ver el pipeline de datos: calidad, imputación e interpolación"
+    }
+  ]
+}

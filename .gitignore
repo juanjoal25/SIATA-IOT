@@ -1,0 +1,15 @@
+node_modules/
+frontend/dist/
+dist/
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Artefactos generados por el ETL (se regeneran con `python -m etl.run`)
+data/processed/*.json
+!data/processed/.gitkeep
+# El volcado crudo del SIATA pesa ~18 MB; se versiona aparte
+data/raw/*.json
+.DS_Store
+Thumbs.db
